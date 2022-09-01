@@ -1,0 +1,44 @@
+{
+  "tests": [
+    {
+      "name": "Test FruitDTO",
+      "setup": "",
+      "run": "gradle test --tests FruitDTOTest",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Tests  FruitHttpClient",
+      "setup": "",
+      "run": "gradle test --tests FruitHttpClientTest",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "FruitDTO output",
+      "setup": "",
+      "run": "! (gradle test --tests FruitDTOTest | grep -A 1 -B 5 \"expected\")",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 0
+    },
+    {
+      "name": "FruitHttpClientTest",
+      "setup": "",
+      "run": "! (gradle test --tests FruitHttpClientTest | grep -A 1 -B 5 \"expected\")",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 0
+    }
+  ]
+}
